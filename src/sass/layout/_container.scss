@@ -1,0 +1,88 @@
+// Page d'accueil
+
+.main-accueil {
+    max-height: 100%;
+}
+
+.accueil-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background: #f7f7f7;
+    padding: 3.5% 1.5% 0 1.5%; 
+    margin: 3% 5% 3% 5%;
+    border-radius: 25px;
+    width: 90%;
+
+}
+
+.spinner-container {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: #ffffff;
+}
+
+// Page logements
+
+.logement {
+    &-main {
+        height: 100vh;
+    }
+    &-container {
+        display: flex;
+        margin: 0 5% 0 5%;
+    }
+    &-infos-container {
+        display: flex;
+        margin: 2% 5% 3% 5%;
+    }
+    &-info1 {
+        
+        &-title {
+            color: $primary;
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 142.6%;
+        }
+        &-location {
+            font-style: normal;
+            color: $primary;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 142.6%;
+            margin-bottom: 1.8em;
+        }
+    }
+    &-info2 {
+        right: 5%;
+        position: absolute;
+        &-profil {
+            display: flex;
+            &-image {
+                height: 64px;
+                width: 64px;
+                border-radius: 90%;
+            }
+        }
+        &-name {
+            margin: 15px 10px 0 0;
+            color: $primary;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 142.6%;
+        }
+        &-stars {
+            display: flex;
+            justify-content: right;
+            margin: 1.5em 0 0 auto;
+        }
+    }
+}
+
+// Page à Propos
+
+.propos-container {
+    height: 70%;
+}
