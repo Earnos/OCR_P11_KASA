@@ -63,6 +63,16 @@
   }
 }
 
+@media (min-width: 1921px) {
+  .accueil-container {
+    gap: 6em;
+  }
+  .card {
+    width: 500px;
+    height: 480px;
+  }
+}
+
 // Page à propos
 @include mobile {
   // banner
