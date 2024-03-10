@@ -1,226 +1,218 @@
 // All pages
 @include mobile {
-    // Header
-    .header {
-        height: 112px;
-        margin-top: -9px;
-        &-logo {
-        width: 145px;
-        height: 47px;
-        }
-        &-link {
-        margin-right: 0;
-        font-size: 1em;
-        text-transform: uppercase;
-        }
+  // Header
+  .header {
+    height: 112px;
+    margin-top: -9px;
+    &-logo {
+      width: 145px;
+      height: 47px;
     }
-    .header-nav.header-accueil {
-        margin-right: 1.1em;
+    &-link {
+      margin-right: 0;
+      font-size: 1em;
+      text-transform: uppercase;
     }
-    // footer
-    .footer {
-        position: absolute;
-            &-rights {
-            font-size: 12px;
-        }
+  }
+  .header-nav.header-accueil {
+    margin-right: 1.1em;
+  }
+  // footer
+  .footer {
+    position: absolute;
+    &-rights {
+      font-size: 12px;
     }
+  }
 }
-
-
-
 
 // page Accueil
- @include mobile {
-
-    // Banner
-    .banner {
-        &-accueil-mobile {
-            & .bannerContainer > img{
-            border-radius: 10px;
-            height: 111px;
-        }
+@include mobile {
+  // Banner
+  .banner {
+    &-accueil-mobile {
+      & .bannerContainer > img {
+        border-radius: 10px;
+        height: 111px;
+      }
     }
-        &-text-accueil-mobile {
-            overflow-wrap: break-word;
-            inline-size: 80%;
-            font-size: 1.6em;
-            line-height: 100%;
-            margin: 3%;
-        }
+    &-text-accueil-mobile {
+      overflow-wrap: break-word;
+      inline-size: 80%;
+      font-size: 1.6em;
+      line-height: 100%;
+      margin: 3%;
     }
-    // main
-    .accueil-container {
-        display: flex;
-        justify-content: center;
-        background-color: inherit;
-        padding: inherit;
-        margin-top: 8%;
+  }
+  // main
+  .accueil-container {
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    padding: inherit;
+    margin-top: 8%;
+  }
+  .card {
+    &-link {
+      margin-bottom: 8%;
     }
-    .card {
-        &-link {
-            margin-bottom: 8%;
-        }
-        &-title {
-            width: 60%;
-            font-size: 16px;
-        }
+    &-title {
+      width: 60%;
+      font-size: 16px;
     }
-
+  }
 }
-
 
 // Page à propos
 @include mobile {
-    // banner
-    #propos-banner {
-        & .bannerContainer {
-            background: center / contain no-repeat url("../../assets/apropos-mobile-banner.jpg");
-            background-size: cover;
-            z-index: 100;
-            border-radius: 10px;
-            & > img {
-                border-radius: 10px;
-                height: 200px;
-                z-index: -100;
-            }
+  // banner
+  #propos-banner {
+    & .bannerContainer {
+      background: center / contain no-repeat
+        url('../../assets/apropos-mobile-banner.jpg');
+      background-size: cover;
+      z-index: 100;
+      border-radius: 10px;
+      & > img {
+        border-radius: 10px;
+        height: 200px;
+        z-index: -100;
+      }
+    }
+  }
 
-        } 
-
-    } 
-
-    // main 
-    .propos {
-        &-container {
-        height: 100%;
-        }
+  // main
+  .propos {
+    &-container {
+      height: 100%;
     }
-    .dropdown-apropos-container {
-        margin: 5% 5%;
+  }
+  .dropdown-apropos-container {
+    margin: 5% 5%;
+  }
+  .drop-btn {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 142.6%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 5px 10px;
+    & > span > img {
+      padding-top: 0;
+      height: 20px;
+      width: 14px;
     }
-    .drop-btn {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 142.6%;
-        border-radius: 5px;
-        height: 30px;
-        padding: 5px 10px;
-        & > span > img {
-            padding-top: 0;
-            height: 20px;
-            width: 14px;
-        }
-    }
-    .dropdown-text {
-        font-size: 14px;
-    }
+  }
+  .dropdown-text {
+    font-size: 14px;
+  }
 }
 
-// Page logement 
+// Page logement
 @include mobile {
-    .logement-infos-container {
-        display: block;
+  .logement-infos-container {
+    display: block;
+  }
+  .logement {
+    &-main {
+      height: 100%;
     }
-    .logement {
-        &-main {
-            height: 100%;
-        }
-        &-container {
-            height: 280px;
-        }
-        &-caroussel {
-            height: 100%;
-        }
-        &-pictures {
-            border-radius: 10px;
-        }
-        &-info1 {
-            &-title {
-                font-size: 24px;
-            }
-            &-location {
-                font-size: 16px;
-            }
-            &-tags {
-                border-radius: 5px;
-                padding: 3px 17px;
-                margin-right: 0.5em;
-                margin-top: 0.5em;
-            }
-        }
-        &-info2 {
-            position: inherit;
-            display: flex;
-            flex-direction: row-reverse;
-            justify-content: space-between;
-            margin: 8% 0;
-        }
-        &-info2-profil {
-            & > img {
-                height: 45px;
-                width: 45px;
-            }
-            & > p {
-                font-size: 16px;
-                margin: 10px 10px 0 0;
-            }
-        }
-        &-info2-stars {
-            margin: 7px 0 0 87px;
-            height: 22px;
-            width: 22px;
-        }
+    &-container {
+      height: 280px;
     }
-    .drop {
-        &-container-btn {
-        display: block;
-            & > div {
-            width: 100%;
-            }
-        }
+    &-caroussel {
+      height: 100%;
     }
-    .dropdown-text {
-        padding: 1em 1em 1em 1em;
-        & > span > ul > li {
-            font-size: 14px;
-        }
-
+    &-pictures {
+      border-radius: 10px;
     }
-    .caroussel-btn {
-        margin-left: 0.3em;
-        & > img {
-        width: 24px;
-        height: 42px;
-    } 
+    &-info1 {
+      &-title {
+        font-size: 24px;
+      }
+      &-location {
+        font-size: 16px;
+      }
+      &-tags {
+        border-radius: 5px;
+        padding: 3px 17px;
+        margin-right: 0.5em;
+        margin-top: 0.5em;
+      }
     }
-    .img-length-display {
-        display: none;
+    &-info2 {
+      position: inherit;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      margin: 8% 0;
     }
+    &-info2-profil {
+      & > img {
+        height: 45px;
+        width: 45px;
+      }
+      & > p {
+        font-size: 16px;
+        margin: 10px 10px 0 0;
+      }
+    }
+    &-info2-stars {
+      margin: 7px 0 0 87px;
+      height: 22px;
+      width: 22px;
+    }
+  }
+  .drop {
+    &-container-btn {
+      display: block;
+      & > div {
+        width: 100%;
+      }
+    }
+  }
+  .dropdown-text {
+    padding: 1em 1em 1em 1em;
+    opacity: 0;
+    & > span > ul > li {
+      font-size: 14px;
+    }
+  }
+  .caroussel-btn {
+    margin-left: 0.3em;
+    & > img {
+      width: 24px;
+      height: 42px;
+    }
+  }
+  .img-length-display {
+    display: none;
+  }
 }
-
 
 // Page error 404
 @include mobile {
-    .error {
-        &-number {
-            font-size: 6em;
-        }
-        &-text {
-            font-size: 1.125em;
-            margin: 0 4% 5em 4%;
-        }
-        &-link-return {
-            font-size: 0.875em;
-        }
+  .error {
+    &-number {
+      font-size: 6em;
     }
+    &-text {
+      font-size: 1.125em;
+      margin: 0 4% 5em 4%;
+    }
+    &-link-return {
+      font-size: 0.875em;
+    }
+  }
 }
 
 // mobile card small size -400px
 
 @media (max-width: 399px) {
-    .card {
-        width: 98%;
-    }
-    .header-link {
-        font-size: 0.75em;
-    }
+  .card {
+    width: 98%;
+  }
+  .header-link {
+    font-size: 0.75em;
+  }
 }

@@ -18,7 +18,7 @@ function Apropos() {
             <section className="dropdown-apropos-container">
                 {
                 data.map((item, index) => (
-                    <DropDownMenu key={"drop" + index} title={item?.title} >
+                    <DropDownMenu key={"drop" + index} title={item?.title} id='dropdown-apropos'>
                         {item.content}
                     </DropDownMenu>
                 ))

@@ -21,10 +21,7 @@ function DropDownMenu(props) {
                     <img src={upArrow} alt="flèche de description" />
                 </span>
             </button>
-            <div className={`dropdown-text ${menu ? 'open' : ''}`} style={{
-                maxHeight: menu ? '100%' : '0', 
-                //transition: 'max-height 0.5s ease'
-            }}>
+            <div className={`dropdown-text ${menu ? 'open' : ''}`}>
                 <span>{props.children}</span>
             </div>
         </div>
