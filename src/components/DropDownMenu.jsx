@@ -1,24 +1,34 @@
 import { useState } from 'react'
 import PropTypes from 'prop-types'
-import bottomArrow from '../assets/bottomArrow.svg'
 import upArrow from '../assets/upArrow.svg'
       
     
 function DropDownMenu(props) {
-    const [menu, setMenu] = useState(false)
-    const toggleMenu = () => { setMenu(!menu) } 
+    const [menu, setMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setMenu(!menu);
+    };
 
     return (
-      
-            <div className='dropdown-container dropdown-component-div'>
-                <button key={props.index} className="drop-btn">
-                    <span>{props.title}</span>
-                    <span onClick={toggleMenu}><img src={menu === true ? bottomArrow : upArrow} alt="flèche de description" /></span>
-                </button>
-                {menu === true ? <div className='dropdown-text'><span>{props.children}</span></div> : false}
+        <div className='dropdown-container dropdown-component-div'>
+            <button key={props.index} className="drop-btn" onClick={toggleMenu}>
+                <span>{props.title}</span>
+                <span style={{
+                    transition: 'transform 0.5s ease', 
+                    transform: `rotate(${menu ? '180' : '0'}deg)` 
+                }}>
+                    <img src={upArrow} alt="flèche de description" />
+                </span>
+            </button>
+            <div className={`dropdown-text ${menu ? 'open' : ''}`} style={{
+                maxHeight: menu ? '100%' : '0', 
+                //transition: 'max-height 0.5s ease'
+            }}>
+                <span>{props.children}</span>
             </div>
-     
-    )
+        </div>
+    );
 }
 
 DropDownMenu.propTypes = {
